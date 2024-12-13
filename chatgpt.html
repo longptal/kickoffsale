@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ảnh Vừa Chiều Ngang, Cuộn Dọc</title>
+    <style>
+        body {
+            margin: 0; /* Xóa khoảng trống mặc định */
+            overflow-x: hidden; /* Ẩn cuộn ngang */
+            overflow-y: auto; /* Bật cuộn dọc nếu ảnh quá dài */
+        }
+
+        img {
+            display: block;
+            width: 100vw; /* Chiều ngang của ảnh vừa khít với chiều ngang màn hình */
+            height: auto; /* Giữ tỷ lệ khung hình */
+        }
+    </style>
+    <title>Nút Click vào đây</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Căn giữa ngang */
+            align-items: center; /* Căn giữa dọc */
+            height: 100vh; /* Chiều cao toàn màn hình */
+            background-color: #f0f0f0; /* Nền trang (tùy chọn) */
+        }
+
+        .center-button {
+            display: inline-block;
+            color: yellow; /* Màu chữ */
+            font-size: 20px; /* Kích thước chữ */
+            text-decoration: none; /* Bỏ gạch chân */
+            border: 2px solid yellow; /* Viền màu vàng */
+            padding: 10px 20px; /* Khoảng cách bên trong nút */
+            background-color: #a62e2e; /* Nền xanh ngọc */
+            border-radius: 5px; /* Bo góc viền */
+            transition: all 0.3s ease; /* Hiệu ứng hover */
+        }
+
+        .center-button:hover {
+            background-color: yellow; /* Nền đổi thành vàng khi hover */
+            color: #20c997; /* Chữ đổi thành xanh ngọc khi hover */
+            border-color: #20c997; /* Viền đổi thành xanh ngọc khi hover */
+        }
+
+        /* Class để chỉnh vị trí tự do nếu không muốn chính giữa */
+        .custom-position {
+            position: absolute;
+            left: 85%; /* Căn giữa ngang */
+            top: 10%; /* Căn giữa dọc */
+            transform: translate(-50%, -50%); /* Đưa tâm nút về giữa */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Chèn ảnh -->
+        <img src="chatgpt.jpg" alt="Mô tả hình ảnh">
+        
+        <!-- Chèn link -->
+        <a href="https://www.chatgpt.com" target="_blank" class="link">Click vào đây</a>
+    </div>
+    <!-- Nút có liên kết -->
+    <a href="https://chat.com" target="_blank" class="center-button custom-position">
+        >>> Thử ngay
+    </a>
+    
+</body>
+</html>
